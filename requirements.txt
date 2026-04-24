@@ -1,0 +1,6 @@
+pyyaml
+python-dotenv
+google-genai
+pydantic
+plotly
+streamlit
