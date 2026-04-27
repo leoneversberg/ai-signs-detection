@@ -42,7 +42,7 @@ def render_gauge(probability: int):
 # -----------------------------
 st.set_page_config(page_title="AI Text Analyzer", layout="wide")
 
-st.title("AI Text Detection")
+st.markdown("### AI Text Detection")
 st.caption("Analyze stylistic patterns associated with AI-generated writing,")
 
 # Layout
@@ -52,7 +52,7 @@ col_main, col_side = st.columns([2.2, 1], border=True)
 # LEFT: Main workflow
 # -----------------------------
 with col_main:
-    text_input = st.text_area("Text", height=400, placeholder="Paste your text here...")
+    text_input = st.text_area("Text", height=450, placeholder="Paste your text here...")
 
     analyze_clicked = st.button("Analyze")
 
