@@ -94,7 +94,7 @@ def call_llm(prompt: str, response_model: Type[T], retries: int = 1) -> T:
 def score_category(category: dict, text: str) -> CategoryScore:
     """Run the rubric for a single category and return the score and reasoning"""
 
-    examples_str = "\n".join(category["examples"])
+    examples_str = "\n".join(f"- {example}" for example in category["examples"])
     prompt = f"""
 You are an expert linguistic evaluator. Your task is to assess whether the given text exhibits a specific writing pattern.
 You must be precise, consistent, and conservative in your judgments. Do not overgeneralize or infer intent beyond the text.
